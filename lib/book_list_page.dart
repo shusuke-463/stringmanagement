@@ -9,12 +9,12 @@ class BookList extends StatelessWidget {
         title: Text('本一覧'),
       ),
       body: StreamBuilder<QuerySnapshot>(
-        stream: Firestore.instance.collection('books').snapshots(),
+        stream: FirebaseFirestore.instance.collection('books').snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           return ListView(
-            children: snapshot.data.documents.map((DocumentSnapshot document) {
+            children: snapshot.data.docs.map((DocumentSnapshot document) {
               return ListTile(
-                title: Text(document['title']),
+                title: Text(document.data()['title']),
               );
             }).toList(),
           );
