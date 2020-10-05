@@ -58,10 +58,6 @@ class MyApp extends StatelessWidget {
             ),
         ),
         ),
-<<<<<<< HEAD
     });
-=======
-    );
->>>>>>> b275ad43b5d78b83b59fa882079dbf5c6283eac7
   }
 }
