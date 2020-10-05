@@ -8,10 +8,9 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  // ignore: missing_return
   Widget build(BuildContext context) {
-    Firebase.initializeApp(
-    return: MaterialApp(
+    Firebase.initializeApp();
+    return MaterialApp(
         title: 'String_management',
         home: ChangeNotifierProvider<MainModel>(
           create: (_) => MainModel(),
@@ -57,7 +56,6 @@ class MyApp extends StatelessWidget {
             // This trailing comma makes auto-formatting nicer for build methods.
             ),
         ),
-        ),
-    });
+        );
   }
 }
